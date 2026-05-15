@@ -7,16 +7,14 @@ function centerSpider() {
   const spiderWidth = spider.offsetWidth;
   const spiderHeight = spider.offsetHeight;
 
-  const wallWidth = wall.offsetWidth;
-  const wallHeight = wall.offsetHeight;
+  const wallWidth = wall.clientWidth;
+  const wallHeight = wall.clientHeight;
 
   const centerX = (wallWidth - spiderWidth) / 2;
   const centerY = (wallHeight - spiderHeight) / 2;
 
-  spider.style.left = `${centerX}px`;
-  spider.style.top = `${centerY}px`;
+  spider.style.left = `${Math.round(centerX)}px`;
+  spider.style.top = `${Math.round(centerY)}px`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  centerSpider();
-});
+centerSpider();
