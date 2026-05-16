@@ -7,8 +7,8 @@ function centerSpider() {
   const spiderWidth = spider.offsetWidth;
   const spiderHeight = spider.offsetHeight;
 
-  const wallWidth = wall.clientWidth;
-  const wallHeight = wall.clientHeight;
+  const wallWidth = wall.offsetWidth - 20;
+  const wallHeight = wall.offsetWidth - 20;
 
   const centerX = (wallWidth - spiderWidth) / 2;
   const centerY = (wallHeight - spiderHeight) / 2;
